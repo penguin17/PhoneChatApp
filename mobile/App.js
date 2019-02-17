@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { TextInput, StyleSheet, Text, View } from "react-native";
 import io from "socket.io-client";
 
+//Socket io client link. Go to the file and change to your local ip address. Check out README.md for more info
+const socketio_config = require("./config/socketio_config");
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +15,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.socket = io("http://192.168.1.75:3000");
+    this.socket = io(socketio_config.socketio_deployment_link);
     this.socket.on("chat message", msg => {
       this.setState({ chatMessages: [...this.state.chatMessages, msg] });
     });
