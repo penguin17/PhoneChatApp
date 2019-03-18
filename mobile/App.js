@@ -33,6 +33,7 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
+        {chatMessages}
         <TextInput
           style={{ height: 40, borderWidth: 2 }}
           autoCorrect={false}
@@ -42,7 +43,6 @@ export default class App extends Component {
             this.setState({ chatMessage });
           }}
         />
-        {chatMessages}
       </View>
     );
   }
@@ -51,6 +51,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#F5FCFF",
+    justifyContent: "flex-end",
   }
 });
