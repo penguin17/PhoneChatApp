@@ -1,0 +1,12 @@
+{
+    "root" : {"data":{"name":"root","price": null, "amount" : null}, "children" : ["Mexican Food"], "parent" : null},
+    "Mexican Food" : {"data":{"name":"Mexican Food","price" : null, "amount" : null}, "children" : ["Taco", "Burrito"], "parent":["root"]},
+    "Taco" : {"data":{"name": "Taco","price": "1", "amount" : "0"}, "children" : ["Meat", "Tortilla"], "parent" : ["Mexican Food"]},
+    "Burrito" : {"data":{"name": "Burrito","price": "5", "amount" : "0"}, "children": ["Meat","Tortilla"], "parent": ["Mexican Food"]},
+    "Meat" : {"data":{"name":"Meat","price" : "0", "amount" : null}, "children" : ["Carne Asada", "Chicken"], "parent" : ["Taco", "Burrito"]},
+    "Carne Asada" : {"data":{"name":"Carne Asada","price" : "0", "amount" : null}, "children" : null, "parent" : ["Meat"]},
+    "Chicken" : {"data":{"name": "Chicken","price" : "0", "amount" : null}, "children" : null, "parent" : ["Meat"]},
+    "Tortilla" : {"data":{"name":"Tortilla","price" : "0", "amount" : null}, "children": ["Corn", "Flower"], "parent" : ["Taco", "Burrito"]},
+    "Corn": {"data":{"name":"Corn","price" : "0", "amount" : null}, "children" : null, "parent" : ["Tortilla"]},
+    "Flower": {"data":{"name":"Flower","price" : "0", "amount" : null}, "children" : null, "parent" : ["Tortilla"]}
+}
